@@ -7,42 +7,45 @@
 
 ```
 Write here your answer e.g:
-(π Pname, Pnumber (project) ⨝ Pno=Pnumber (works_on)) ⨝.... 
+π Pname, Pnumber, Ssn, Fname, Minit, Lname (project ⨝ Pnumber=Pno (employee ⨝ Ssn=Essn works_on))
 ```
 
 
 ### *b)* 
 
 ```
-... Write here your answer ...
+π Fname, Minit, Lname (σ Super_ssn=21312332 (employee))
 ```
 
 
 ### *c)* 
 
 ```
-... Write here your answer ...
+π Pname, totalHours ((γ Pno; totalHours <- sum(Hours) (works_on)) ⨝ Pnumber=Pno (project))
 ```
 
 
 ### *d)* 
 
 ```
-... Write here your answer ...
+π Fname (employee ⟕ Ssn=Essn (π Essn, Hours (σ (Pno=1 ∧ Hours>20) (works_on))))
 ```
 
 
 ### *e)* 
 
 ```
-... Write here your answer ...
+π Fname, Minit, Lname (employee ⋉ (π Ssn (employee) - π Essn (works_on)))
 ```
 
 
 ### *f)* 
 
 ```
-... Write here your answer ...
+onlyF = (σ Sex='F' (employee))
+fSalaryPerDepartment = γ Dno; averageSalary <- avg(Salary) onlyF
+
+π Dname, averageSalary (department ⨝ Dno=Dnumber fSalaryPerDepartment)
 ```
 
 
