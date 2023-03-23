@@ -103,7 +103,9 @@ no_enc_forn = σ fornecedor=null (forn_enc)
 ### *b)* 
 
 ```
-... Write here your answer ...
+γ produto.nome; avg(item.unidades) -> unidades
+π item.numEnc, produto.codigo, produto.nome, item.unidades
+(produto ⨝ codProd = codigo item)
 ```
 
 
