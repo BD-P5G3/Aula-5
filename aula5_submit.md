@@ -135,7 +135,9 @@ filtered = σ numPresc=null (fullTable)
 ### *b)* 
 
 ```
-... Write here your answer ...
+prescPorMedico = medico ⨝ numSNS=numMedico (prescricao)
+
+γ especialidade; totalPresc <- count(numPresc) (prescPorMedico)
 ```
 
 
