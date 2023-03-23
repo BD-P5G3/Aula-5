@@ -28,7 +28,7 @@ Write here your answer e.g:
 ### *d)* 
 
 ```
-π Fname (employee ⟕ Ssn=Essn (π Essn, Hours (σ (Pno=1 ∧ Hours>20) (works_on))))
+π Fname, Lname, Pname, Dno, Hours (σ works_on.Hours > 20 (employee ⨝ Ssn = works_on.Essn ((σ Pname = 'Aveiro Digital' project ) ⨝ Pnumber = Pno works_on)))
 ```
 
 
