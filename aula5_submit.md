@@ -93,7 +93,11 @@ fullTable = employee ⨝ Ssn=Essn emp_WO_AvPrWDepNIAv
 ### *a)*
 
 ```
-... Write here your answer ...
+forn_enc = fornecedor ⟕ nif=fornecedor (encomenda)
+
+no_enc_forn = σ fornecedor=null (forn_enc)
+
+π nif, nome, fax, endereco, condpag, tipo (no_enc_forn)
 ```
 
 ### *b)* 
