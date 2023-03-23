@@ -72,7 +72,17 @@ EmpMoreThanTwoDeps = (employee) ⨝ Ssn=Essn (depCountMoreThanTwo)
 ### *i)* 
 
 ```
-... Write here your answer ...
+aveiroProj = σ Plocation='Aveiro' (project)
+
+depsNotInAveiro = department ▷ σ Dlocation='Aveiro' (dept_location)
+
+avProjWithDepNotInAv = aveiroProj ⨝ Dnumber=Dnum depsNotInAveiro
+
+emp_WO_AvPrWDepNIAv = works_on ⨝ Pno=Pnumber (avProjWithDepNotInAv)
+
+fullTable = employee ⨝ Ssn=Essn emp_WO_AvPrWDepNIAv
+
+π Fname, Minit, Lname, Address (fullTable)
 ```
 
 
