@@ -65,7 +65,9 @@ EmpMoreThanTwoDeps = (employee) ⨝ Ssn=Essn (depCountMoreThanTwo)
 ### *h)* 
 
 ```
-... Write here your answer ...
+managerDepartment =  employee ⨝ Ssn = Mgr_ssn (department)
+
+π Fname, Minit, Lname managerDepartment - π Fname, Minit, Lname (managerDepartment ⨝ Ssn = Essn dependent)
 ```
 
 
