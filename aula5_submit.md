@@ -130,7 +130,11 @@ numProd_enc = γ numEnc; countProd <- count(codProd) (item)
 ### *a)*
 
 ```
-... Write here your answer ...
+fullTable = (paciente ⟕ prescricao)
+
+filtered = σ numPresc=null (fullTable)
+
+π numUtente, nome, dataNasc, endereco (filtered)
 ```
 
 ### *b)* 
