@@ -53,7 +53,6 @@ fSalaryPerDepartment = γ Dno; averageSalary <- avg(Salary) onlyF
 
 ```
 depCountByEssn = γ Essn; depCount <- count(Essn) (dependent)
-
 depCountMoreThanTwo = σ depCount>2 (depCountByEssn)
 
 EmpMoreThanTwoDeps = (employee) ⨝ Ssn=Essn (depCountMoreThanTwo)
@@ -77,11 +76,9 @@ managerDepartment =  employee ⨝ Ssn = Mgr_ssn (department)
 aveiroProj = σ Plocation='Aveiro' (project)
 
 depsNotInAveiro = department ▷ σ Dlocation='Aveiro' (dept_location)
-
 avProjWithDepNotInAv = aveiroProj ⨝ Dnumber=Dnum depsNotInAveiro
 
 emp_WO_AvPrWDepNIAv = works_on ⨝ Pno=Pnumber (avProjWithDepNotInAv)
-
 fullTable = employee ⨝ Ssn=Essn emp_WO_AvPrWDepNIAv
 
 π Fname, Minit, Lname, Address (fullTable)
@@ -94,7 +91,6 @@ fullTable = employee ⨝ Ssn=Essn emp_WO_AvPrWDepNIAv
 
 ```
 forn_enc = fornecedor ⟕ nif=fornecedor (encomenda)
-
 no_enc_forn = σ fornecedor=null (forn_enc)
 
 π nif, nome, fax, endereco, condpag, tipo (no_enc_forn)
@@ -131,7 +127,6 @@ numProd_enc = γ numEnc; countProd <- count(codProd) (item)
 
 ```
 fullTable = (paciente ⟕ prescricao)
-
 filtered = σ numPresc=null (fullTable)
 
 π numUtente, nome, dataNasc, endereco (filtered)
