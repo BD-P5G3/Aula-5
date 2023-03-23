@@ -120,7 +120,8 @@ numProd_enc = γ numEnc; countProd <- count(codProd) (item)
 ### *d)* 
 
 ```
-... Write here your answer ...
+π fornecedor.nif, fornecedor.nome, produto.codigo, produto.nome, item.unidades
+(produto ⨝ item.codProd = codigo (fornecedor ⨝ encomenda.fornecedor = nif (item ⨝ numero = numEnc encomenda)))
 ```
 
 
