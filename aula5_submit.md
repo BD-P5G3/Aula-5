@@ -112,7 +112,8 @@ no_enc_forn = σ fornecedor=null (forn_enc)
 ### *c)* 
 
 ```
-... Write here your answer ...
+numProd_enc = γ numEnc; countProd <- count(codProd) (item)
+γ ; average <- avg(countProd) (numProd_enc)
 ```
 
 
