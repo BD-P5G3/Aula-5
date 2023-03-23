@@ -52,7 +52,13 @@ fSalaryPerDepartment = γ Dno; averageSalary <- avg(Salary) onlyF
 ### *g)* 
 
 ```
-... Write here your answer ...
+depCountByEssn = γ Essn; depCount <- count(Essn) (dependent)
+
+depCountMoreThanTwo = σ depCount>2 (depCountByEssn)
+
+EmpMoreThanTwoDeps = (employee) ⨝ Ssn=Essn (depCountMoreThanTwo)
+
+π Fname, Minit, Lname (EmpMoreThanTwoDeps)
 ```
 
 
