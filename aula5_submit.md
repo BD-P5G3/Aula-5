@@ -52,7 +52,7 @@ fSalaryPerDepartment = γ Dno; averageSalary <- avg(Salary) onlyF
 ### *g)* 
 
 ```
-depCountByEssn = γ Essn; depCount <- count(Essn) (dependent)
+depCountByEssn = γ Essn; depCount <- count(*) (dependent)
 depCountMoreThanTwo = σ depCount>2 (depCountByEssn)
 
 EmpMoreThanTwoDeps = (employee) ⨝ Ssn=Essn (depCountMoreThanTwo)
@@ -108,7 +108,7 @@ no_enc_forn = σ fornecedor=null (forn_enc)
 ### *c)* 
 
 ```
-numProd_enc = γ numEnc; countProd <- count(codProd) (item)
+numProd_enc = γ numEnc; countProd <- count(*) (item)
 γ ; average <- avg(countProd) (numProd_enc)
 ```
 
@@ -137,7 +137,7 @@ filtered = σ numPresc=null (fullTable)
 ```
 prescPorMedico = medico ⨝ numSNS=numMedico (prescricao)
 
-γ especialidade; totalPresc <- count(numPresc) (prescPorMedico)
+γ especialidade; totalPresc <- count(*) (prescPorMedico)
 ```
 
 
@@ -146,7 +146,7 @@ prescPorMedico = medico ⨝ numSNS=numMedico (prescricao)
 ```
 fullTable = farmacia ⨝ nome=farmacia prescricao
 
-γ nome; countPresc <- count(numPresc) (fullTable)
+γ nome; countPresc <- count(*) (fullTable)
 ```
 
 
