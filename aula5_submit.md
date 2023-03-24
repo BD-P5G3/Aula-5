@@ -144,7 +144,9 @@ prescPorMedico = medico ⨝ numSNS=numMedico (prescricao)
 ### *c)* 
 
 ```
-... Write here your answer ...
+fullTable = farmacia ⨝ nome=farmacia prescricao
+
+γ nome; countPresc <- count(numPresc) (fullTable)
 ```
 
 
