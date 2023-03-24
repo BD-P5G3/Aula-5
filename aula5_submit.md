@@ -153,7 +153,10 @@ fullTable = farmacia ⨝ nome=farmacia prescricao
 ### *d)* 
 
 ```
-... Write here your answer ...
+farm_906 = π nome (σ numRegFarm=906 (farmaco))
+farm_ja_presc = π nomeFarmaco (σ numRegFarm=906 (presc_farmaco))
+
+farm_906 - farm_ja_presc
 ```
 
 ### *e)* 
