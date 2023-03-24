@@ -162,11 +162,16 @@ farm_906 - farm_ja_presc
 ### *e)* 
 
 ```
-... Write here your answer ...
+γ farmacia.nome, farmaceutica.nome; count(presc_farmaco.nomeFarmaco) -> num_farmacos
+π farmacia.nome, farmaceutica.nome, presc_farmaco.nomeFarmaco
+(farmaceutica ⨝ presc_farmaco.numRegFarm = numReg
+(farmacia ⨝ prescricao.farmacia = nome 
+π prescricao.farmacia, presc_farmaco.numRegFarm, presc_farmaco.nomeFarmaco
+(prescricao ⨝ numPrescX = numPresc (ρ numPrescX←numPresc (presc_farmaco)))))
 ```
 
 ### *f)* 
 
 ```
-... Write here your answer ...
+paciente ⨝ σ num_UU > 1 (γ numUtente; count(numUtente)->num_UU (γ numUtente, numMedico; count(numMedico)-> numPrescricoes prescricao))
 ```
